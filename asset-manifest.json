@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/socketio-chat-front/static/css/main.94045f9b.css",
+    "main.js": "/socketio-chat-front/static/js/main.e1b2657a.js",
+    "static/js/787.01380b66.chunk.js": "/socketio-chat-front/static/js/787.01380b66.chunk.js",
+    "index.html": "/socketio-chat-front/index.html",
+    "main.94045f9b.css.map": "/socketio-chat-front/static/css/main.94045f9b.css.map",
+    "main.e1b2657a.js.map": "/socketio-chat-front/static/js/main.e1b2657a.js.map",
+    "787.01380b66.chunk.js.map": "/socketio-chat-front/static/js/787.01380b66.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.94045f9b.css",
+    "static/js/main.e1b2657a.js"
+  ]
+}
