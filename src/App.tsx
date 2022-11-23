@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import './App.css';
 import {io} from 'socket.io-client';
 
@@ -21,6 +21,8 @@ function App() {
     const [users, setUsers] = useState<Array<string>>([])
     const [text, setText] = useState('')
     const [name, setName] = useState('')
+    const anchor = useRef<HTMLDivElement>(null)
+
 
     useEffect(() => {
         socket.on('init-messages-published', (messages: Array<MessagesType>) => {
@@ -37,6 +39,9 @@ function App() {
         })
     }, [])
 
+    useEffect(()=> {
+        anchor.current?.scrollIntoView({behavior:'smooth'})
+    },[messages])
 
     return !name
         ? (
@@ -70,6 +75,7 @@ function App() {
                                 <hr/>
                             </div>)
                         })}
+                        <div ref={anchor}></div>
                     </div>
                     <textarea value={text} onChange={e => setText(e.currentTarget.value)}></textarea>
                     <button onClick={() => {
